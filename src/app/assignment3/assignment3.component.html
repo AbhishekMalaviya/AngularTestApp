@@ -1,0 +1,5 @@
+<p *ngIf="Display">assignment3 works!</p>
+<button (click)="onDisplayClick()">Display Details</button>
+<p *ngFor="let log of Logs">
+  <span [ngStyle]="{backgroundColor:log>4?'blue':'none'}" [ngClass]="{blue:log>4}">{{log}}</span>
+</p>

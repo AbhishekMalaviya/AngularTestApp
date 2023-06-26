@@ -1,0 +1,7 @@
+<p *ngIf="!(serverName==='');else serverNotExist">server Id {{serverId}} for {{serverName}} which is:{{getServerStaus()}}</p>
+<ng-template #serverNotExist>
+  <p>No server found.</p>
+</ng-template>
+<!-- <input type="text" (input)="onUpdateServerName($event)" class="form-control1"> -->
+<input type="text" [(ngModel)]="serverName" class="form-control1">
+<button [disabled]="serverName===''" class="btn btn-primary" (click)="onCreateServer()">Add Server</button>
